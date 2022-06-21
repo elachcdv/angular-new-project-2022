@@ -1,5 +1,16 @@
-<p>movies works!</p>
-<button (click)="getMoviesList()">Click to get response</button>
+<p>
+  <input
+    type="text"
+    id="movieTitle"
+    name="movieTitle"
+    [(ngModel)]="movieTitle"
+  />
+</p>
+
+<h1></h1>
+<button type="button" (click)="getMoviesList(); getMovieTitle()">
+  Click to find movies
+</button>
 
 <div *ngFor="let movie of movies">
   {{ movie.id }}

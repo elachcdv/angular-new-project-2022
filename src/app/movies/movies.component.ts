@@ -9,7 +9,7 @@ import {MoviesService} from './services/movies.service';
 })
 export class MoviesComponent implements OnInit {
   public movies: Movie[] = [];
-  // loadedMovies = [];
+  movieTitle: string = '';
 
   constructor(private moviesService: MoviesService) {}
 
@@ -20,14 +20,9 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    // this.moviesService.getMovies().pipe(
-    //   map((responseData: any) => {
-    //     console.log(responseData);
-    //   }),
-    // ).subscribe(data => {
-    //   console.log(data);
-    // console.log(data.results);
-    // });
+  getMovieTitle() {
+    console.log('this is movie title:', this.movieTitle);
   }
+
+  ngOnInit(): void {}
 }
