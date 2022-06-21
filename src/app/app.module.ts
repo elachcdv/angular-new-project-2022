@@ -11,21 +11,27 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {HttpClientModule} from '@angular/common/http';
+import {MoviesComponent} from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutComponent,
+    MoviesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
