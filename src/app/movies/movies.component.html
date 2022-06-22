@@ -1,17 +1,9 @@
-<p>
-  <input
-    type="text"
-    id="movieTitle"
-    name="movieTitle"
-    [(ngModel)]="movieTitle"
-  />
-</p>
+<search-form (newMovieTitleEvent)="getMoviesList($event)"></search-form>
 
-<h1></h1>
-<button type="button" (click)="getMoviesList(); getMovieTitle()">
-  Click to find movies
-</button>
+<!-- zbudowanie DOM + css -->
+<!-- po wyszukaniu dodanie routingu do /movies -->
+<!-- kliknięcie po Id na następne detale/movies/:id  -->
 
-<div *ngFor="let movie of movies">
-  {{ movie.id }}
+<div *ngFor="let movie of movies" [routerLink]="['/movies', movie.id]">
+  {{ movie.id }}, {{ movie.title }}
 </div>

@@ -14,7 +14,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
 import {MoviesComponent} from './movies/movies.component';
-import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
+import {SearchFormComponent} from './forms/search-form/search-form.component';
+import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     AboutComponent,
     MoviesComponent,
+    SearchFormComponent,
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
