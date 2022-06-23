@@ -16,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {MoviesComponent} from './movies/movies.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {SearchFormComponent} from './forms/search-form/search-form.component';
-import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
+import {MovieDetailComponent} from './movies/movie-detail/movie-detail.component';
+import {HoverDirective} from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MovieDetailComponent } from './movies/movie-detail/movie-detail.compone
     MoviesComponent,
     SearchFormComponent,
     MovieDetailComponent,
+    HoverDirective,
   ],
   imports: [
     BrowserModule,
