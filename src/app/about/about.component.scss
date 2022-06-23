@@ -2,3 +2,20 @@ mat-card {
   width: 90%;
   margin: 30px auto;
 }
+.mat-card-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.mat-card-subtitle {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+h2 {
+  color: red;
+}
+p {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  color: rgb(0, 0, 0);
+}

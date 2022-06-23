@@ -5,5 +5,7 @@
 <!-- kliknięcie po Id na następne detale/movies/:id  -->
 
 <div *ngFor="let movie of movies" [routerLink]="['/movies', movie.id]">
-  {{ movie.id }}, {{ movie.title }}
+  <h2>{{ movie.title }}</h2>
+  <img [src]="movie.image" />
+  <p>{{ movie.description }}</p>
 </div>

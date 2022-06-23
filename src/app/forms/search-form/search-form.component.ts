@@ -23,16 +23,10 @@ export class SearchFormComponent {
   });
 
   onSubmit() {
-    console.log(this.form);
+    // console.log(this.form);
   }
 
   addMovieTitle(value: string) {
     this.newMovieTitleEvent.emit(value);
   }
-  //
-  //
-  //
-  // reset() {
-  //   this.form.reset();
-  // }
 }

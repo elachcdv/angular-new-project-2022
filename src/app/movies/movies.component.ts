@@ -16,7 +16,7 @@ export class MoviesComponent {
     this.moviesService
       .getMovies(searchTerm)
       .subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.movies = data.results;
       });
   }
