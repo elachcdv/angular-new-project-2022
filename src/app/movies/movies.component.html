@@ -1,15 +1,25 @@
-<search-form (newMovieTitleEvent)="getMoviesList($event)"></search-form>
+<search-form
+  class="center"
+  (newMovieTitleEvent)="getMoviesList($event)"
+></search-form>
 
 <!-- zbudowanie DOM + css -->
 <!-- po wyszukaniu dodanie routingu do /movies -->
 <!-- kliknięcie po Id na następne detale/movies/:id  -->
 
 <div
+  class="container"
   hover-class="details-link"
   *ngFor="let movie of movies"
   [routerLink]="['/movies', movie.id]"
 >
+  <img class="image" [src]="movie.image" />
   <h2>{{ movie.title }}</h2>
-  <img [src]="movie.image" />
   <p>{{ movie.description }}</p>
+  <p>{{ movie.resultType }}</p>
 </div>
+<mat-paginator
+  [length]="totalPages"
+  [pageSize]="perPage"
+  (page)="onPageChange($event)"
+></mat-paginator>
