@@ -1,10 +1,27 @@
+.detail-back-to-search {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+button.btn-back-to-search {
+  margin: 30px auto 20px auto;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #47adb0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+button.btn-back-to-search a {
+  color: #fff;
+  text-decoration: none;
+}
 .detail-image {
   height: auto;
   max-width: 500px;
   border-radius: 10px;
 }
 .detail-container {
-  height: 90vh;
+  height: 80vh;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;

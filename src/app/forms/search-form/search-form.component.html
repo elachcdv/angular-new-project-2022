@@ -1,9 +1,7 @@
 <form class="search-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Write title fo find movies</label>
   <p>
-    <label>Write title fo find movies</label>
-  </p>
-  <p>
-    <input type="text" formControlName="movieTitle" />
+    <input type="text" formControlName="movieTitle" placeholder="Write title" />
   </p>
   <p>
     <button
@@ -12,7 +10,7 @@
       [disabled]="!form.valid"
       (click)="addMovieTitle(form.value.movieTitle)"
     >
-      Find movies
+      Search movies
     </button>
   </p>
 </form>
