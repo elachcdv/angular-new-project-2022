@@ -14,7 +14,7 @@ export class MoviesService {
     searchTerm: string,
   ): Observable<MovieResults> {
     return this.http.get<MovieResults>(
-      `https://imdb-api.com/en/API/SearchMovie/k_28x30ddn/${searchTerm}/`,
+      `https://imdb-api.com/en/API/SearchMovie/k_pgd93xda/${searchTerm}/`,
     );
     // .pipe(map(response => response.results));
   }
@@ -23,7 +23,7 @@ export class MoviesService {
     movieId: string,
   ): Observable<MovieDetails> {
     return this.http.get<MovieDetails>(
-      `https://imdb-api.com/en/API/Title/k_28x30ddn/${movieId}/`,
+      `https://imdb-api.com/en/API/Title/k_pgd93xda/${movieId}/`,
     );
   }
 }

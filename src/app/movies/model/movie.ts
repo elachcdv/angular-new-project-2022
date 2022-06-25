@@ -11,13 +11,14 @@ export type MovieResults = {
 };
 
 export type MovieDetails = {
-  awards: string;
-  id: string;
   image: string;
-  title: string;
-  genres: string;
+  fullTitle: string;
+  awards: string;
+  directors: string;
   plot: string;
-  starsList: StarsList[];
+  genres: string;
+  imDbRating: string;
+  starList: StarsList[];
 };
 
 export type StarsList = {

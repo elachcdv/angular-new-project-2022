@@ -11,7 +11,7 @@ import {PageEvent} from '@angular/material/paginator';
 export class MoviesComponent {
   public movies: Movie[] = [];
   totalPages: number = 0;
-  perPage: number = 0;
+  perPage: number = 1;
 
   constructor(private moviesService: MoviesService) {}
 
@@ -22,8 +22,8 @@ export class MoviesComponent {
         // console.log(data);
         this.movies = data.results;
         this.totalPages = data.results.length;
-        console.log(this.totalPages);
-        this.perPage = data.results.length;
+        // console.log(this.totalPages);
+        // this.perPage = 3;
       });
   }
 

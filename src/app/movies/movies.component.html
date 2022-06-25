@@ -6,20 +6,22 @@
 <!-- zbudowanie DOM + css -->
 <!-- po wyszukaniu dodanie routingu do /movies -->
 <!-- kliknięcie po Id na następne detale/movies/:id  -->
+<div class="container">
+  <div
+    class="movie-box"
+    hover-class="details-link"
+    *ngFor="let movie of movies"
+    [routerLink]="['/movies', movie.id]"
+  >
+    <img class="image" [src]="movie.image" />
+    <h2 class="title">{{ movie.title }}</h2>
+    <p>{{ movie.description }}</p>
+    <p>{{ movie.resultType }}</p>
+  </div>
 
-<div
-  class="container"
-  hover-class="details-link"
-  *ngFor="let movie of movies"
-  [routerLink]="['/movies', movie.id]"
->
-  <img class="image" [src]="movie.image" />
-  <h2>{{ movie.title }}</h2>
-  <p>{{ movie.description }}</p>
-  <p>{{ movie.resultType }}</p>
+  <mat-paginator
+    [length]="totalPages"
+    [pageSize]="perPage"
+    (page)="onPageChange($event)"
+  ></mat-paginator>
 </div>
-<mat-paginator
-  [length]="totalPages"
-  [pageSize]="perPage"
-  (page)="onPageChange($event)"
-></mat-paginator>

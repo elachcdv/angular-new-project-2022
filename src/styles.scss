@@ -53,9 +53,16 @@ $angular-pro-2022-theme: mat.define-light-theme(
   font-weight: bold;
   color: #f50;
 }
-p {
-  font-size: 2em;
+h1,
+h2,
+h3,
+p,
+li {
   color: rgb(255, 255, 255);
+}
+p,
+li {
+  font-size: 2em;
 }
 
 html,
