@@ -12,6 +12,7 @@ export class MoviesComponent {
   public movies: Movie[] = [];
   totalPages: number = 0;
   perPage: number = 1;
+  public paginatedMovies: Movie[] = [];
 
   constructor(private moviesService: MoviesService) {}
 
@@ -19,15 +20,25 @@ export class MoviesComponent {
     this.moviesService
       .getMovies(searchTerm)
       .subscribe(data => {
-        // console.log(data);
         this.movies = data.results;
         this.totalPages = data.results.length;
-        // console.log(this.totalPages);
-        // this.perPage = 3;
+        this.calculatePaginatedMovies(0, this.perPage);
       });
   }
 
   onPageChange(event: PageEvent) {
-    const nextPage = event.pageIndex + 1;
+    this.calculatePaginatedMovies(
+      event.pageIndex,
+      this.perPage,
+    );
+  }
+
+  calculatePaginatedMovies(
+    currentPage: number,
+    perPage: number,
+  ): void {
+    const start = currentPage * perPage;
+    const end = (currentPage + 1) * perPage;
+    this.paginatedMovies = this.movies.slice(start, end);
   }
 }

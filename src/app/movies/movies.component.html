@@ -10,13 +10,12 @@
   <div
     class="movie-box"
     hover-class="details-link"
-    *ngFor="let movie of movies"
+    *ngFor="let movie of paginatedMovies"
     [routerLink]="['/movies', movie.id]"
   >
     <img class="image" [src]="movie.image" />
     <h2 class="title">{{ movie.title }}</h2>
     <p>{{ movie.description }}</p>
-    <p>{{ movie.resultType }}</p>
   </div>
 
   <mat-paginator

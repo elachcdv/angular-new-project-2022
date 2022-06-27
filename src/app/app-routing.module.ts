@@ -18,6 +18,11 @@ const routes: Routes = [
     path: 'movies/:id',
     component: MovieDetailComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

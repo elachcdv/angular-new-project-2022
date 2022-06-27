@@ -6,16 +6,22 @@
   cursor: pointer;
 }
 .movie-box {
+  margin: 50px auto;
   max-width: 400px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+.movie-box img {
+  max-height: 400px;
+  max-width: 100%;
 }
 .title {
   color: white;
 }
-// materials
 .mat-paginator {
-  position: absolute;
+  position: fixed;
   display: block;
   bottom: 0;
   width: 100%;
