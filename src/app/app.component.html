@@ -1,9 +1,14 @@
 <mat-toolbar>
   <h1>{{ title }}</h1>
   <nav>
-    <div *ngIf="router.url != '/home'">
-      <search-form></search-form>
-    </div>
+    <button
+      class="go-to-search-button"
+      *ngIf="router.url != '/home'"
+      (click)="movetoSearchMoviePage()"
+    >
+      Go to search
+    </button>
+
     <button mat-raised-button color="primary" routerLink="/home">
       <mat-icon>house</mat-icon>
       <span> Home </span>

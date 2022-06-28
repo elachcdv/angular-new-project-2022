@@ -9,4 +9,8 @@ import {Router} from '@angular/router';
 export class AppComponent {
   title = 'Find Your Movie';
   constructor(public router: Router) {}
+
+  movetoSearchMoviePage() {
+    this.router.navigate(['/search-movie']);
+  }
 }

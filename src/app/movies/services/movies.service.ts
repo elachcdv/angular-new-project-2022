@@ -16,7 +16,6 @@ export class MoviesService {
     return this.http.get<MovieResults>(
       `https://imdb-api.com/en/API/SearchMovie/k_pgd93xda/${searchTerm}/`,
     );
-    // .pipe(map(response => response.results));
   }
 
   public getMovieDetails(
